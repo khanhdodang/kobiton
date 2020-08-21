@@ -16,11 +16,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.khanhdodang</groupId>
-            <artifactId>kobiton</artifactId>
-            <version>master</version>
-        </dependency>
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
