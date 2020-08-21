@@ -13,7 +13,11 @@ public class AgentTest {
             System.err.println("Your UserName or API Key are empty.");
         }
 
-        boolean flag = Agent.waitForDeviceOnline(hostName, username, apiKey, "cloud", "LGD722J46ab679a", 120);
-        System.out.println("Does the device exist? " + flag);
+        Agent.waitForDeviceOnline(hostName, username, apiKey, "cloud", "LGD722J46ab679a", 120);
+        Agent.waitForDeviceOnline(username, apiKey, "cloud", "LGD722J46ab679a", 120);
+        Agent.waitForDeviceOnline(username, apiKey, "cloud", "LGD722J46ab679a");
+        Agent.waitForDeviceOnline(username, apiKey, "LGD722J46ab679a", 120);
+        Agent.waitForDeviceOnline(username, apiKey, "LGD722J46ab679a");
+
     }
 }
