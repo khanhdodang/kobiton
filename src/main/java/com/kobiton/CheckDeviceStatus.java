@@ -9,9 +9,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class CheckDeviceStatus {
-    public CheckDeviceStatus() {
-    }
-
     static JSONObject filterDeviceInfo(JSONObject device) {
         JSONObject filteredDeviceInfo = new JSONObject();
         filteredDeviceInfo.put("id", device.get("id"));

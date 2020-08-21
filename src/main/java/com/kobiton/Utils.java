@@ -3,9 +3,6 @@ package com.kobiton;
 import org.apache.commons.codec.binary.Base64;
 
 public class Utils {
-    public Utils() {
-    }
-
     public static void sleep(int seconds) {
         try {
             Thread.sleep((long)(seconds * 1000));

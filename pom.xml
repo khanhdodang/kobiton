@@ -7,7 +7,19 @@
     <groupId>com.kobiton</groupId>
     <artifactId>agent</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <dependencies>
+        <dependency>
+            <groupId>com.github.khanhdodang</groupId>
+            <artifactId>kobiton</artifactId>
+            <version>master</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

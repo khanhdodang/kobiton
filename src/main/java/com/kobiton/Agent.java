@@ -1,12 +1,9 @@
 package com.kobiton;
 
-public class Main {
+public class Agent {
     private static String username;
     private static String apiKey;
     private static String hostName = "api.kobiton.com";
-
-    public Main() {
-    }
 
     public static void main(String[] args) {
         username = System.getenv("KOBITON_USERNAME") != null ? System.getenv("KOBITON_USERNAME") : username;
@@ -16,7 +13,11 @@ public class Main {
             System.err.println("Your UserName or API Key are empty.");
         }
 
-        boolean flag = CheckDeviceStatus.waitForDevice(hostName, username, apiKey, "cloud", "LGD722J46ab679a", 120);
+        boolean flag = waitForDeviceOnline(hostName, username, apiKey, "cloud", "LGD722J46ab679a", 120);
         System.out.println("Does the device exist? " + flag);
+    }
+
+    public static boolean waitForDeviceOnline(String hostName, String username, String apiKey, String deviceGroup, String udid, int timeOutInSeconds) {
+        return CheckDeviceStatus.waitForDevice(hostName, username, apiKey, deviceGroup, udid, timeOutInSeconds);
     }
 }
